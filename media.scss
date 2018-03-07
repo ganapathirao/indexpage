@@ -1,0 +1,159 @@
+$screen-xs-max: 767px;
+$screen-sm-max: 991px;
+$screen-md-max: 1199px;
+$screen-lg-min: 1200px;
+
+@mixin button($color,$font-size,$padding,$font-weight,$margin-top){
+	 		  color: $color;
+	 	      font-size: $font-size;
+	 	      padding: $padding;
+	 	      font-weight: $font-weight;
+			  margin-top:$margin-top;	
+}
+
+
+@media only screen  and (max-width: $screen-md-max) {
+.secondbgimage {
+			  background-image: url("assets/bgimgformd.jpg");
+			  height: 850px; 
+			  background-repeat: no-repeat;
+			  background-position: center;
+		   }
+.bgimgtext{
+			  margin-top:480px;
+		  }
+} 
+
+@media only screen  and (max-width: $screen-sm-max) { 
+.secondbgimage {
+			  background-image: url("assets/bgimgforsm.jpg");
+			  height: 700px;
+			  background-repeat: no-repeat; 
+			  background-position: center;
+		   }
+	.firstbgimage p{
+			font-size: 28px;
+			margin-top:27px;
+		    }
+	.firstbgimage{
+    		height:440px;
+ 	       }
+ 	 .bgimgtext{
+			margin-top:350px;
+	        }
+ }
+
+
+ @media only screen  and (max-width: $screen-xs-max) { 
+		.secondbgimage {
+					  background-image: url("assets/bgimgforxs.jpg");
+					  height: 571px;
+					  background-repeat: no-repeat;
+					  background-position: center;
+				   }
+		.firstbgimage p{
+					font-size: 23px;
+					margin-top:30px;
+					margin-left:30px;
+				}
+		.firstbgimage{
+		    		   height:340px;
+		 		    }
+		h1{
+			  font-size: 25px;
+		  }
+		h5{
+			  font-size: 20px;
+		  }
+			 
+		.bgimgtext{
+			  margin-top:300px;
+		   }
+		.bgimgtext h3{
+			  font-size: 25px;
+		   }
+		.bgimgtext h4{
+		   	   line-height: 1.1;
+		   }
+		input[type="search"]{
+					font-style:italic;
+					@include button(black,18px,0px,bold,10px);
+			}
+		input[type="submit"]{
+					background-color:#f81010;
+					margin-bottom:20px;
+					border-color: #f81010;
+					@include button(white,18px,0px,bold,10px);
+			}
+}
+
+
+@media only screen and (max-width: 500px){
+
+		.secondbgimage {
+						 background-image: url("assets/bgimgforvsm.jpg");
+						 height: 372px;
+						 background-repeat: no-repeat;
+						 background-position: center;
+				   }
+		.firstbgimage p{
+						font-size: 14px;
+						margin-top:25px;
+						margin-left:0px;
+			}
+		.firstbgimage{
+				height: 200px;
+			}
+		.bgimgtext{
+				margin-top:150px;
+		}
+		.bgimgtext h3{
+				font-size: 18px;
+		}
+		.bgimgtext h4{
+				font-size: 15px;
+				line-height:1.1;
+		}
+		input[type="search"]{
+					font-style:italic;
+					@include button(black,13px,0px,bold,0px);
+
+			}
+		input[type="submit"]{
+					background-color:#f81010;
+					margin-bottom:10px;
+					border-color: #f81010;
+					@include button(white,13px,0px,bold,2px);
+			}
+}
+ 
+@media only screen and (max-width: 320px){
+		.secondbgimage {
+				 background: url("assets/bgimgforvxsm.jpg");
+				 height:250px;
+				 background-repeat: no-repeat;
+				  background-position: center;
+				 }
+				
+		.bgimgtext h3{
+				font-size: 13px;
+				margin-top: 4px;
+		}
+		.bgimgtext h4{
+				font-size: 12px;
+				line-height:1;
+		}
+		.firstbgimage p{
+				font-size: 12px;
+				margin-top:0px;
+		}
+		.bgimgtext{
+				margin-top:100px;
+		}
+	    .asidecontent{
+				word-spacing: -5px;
+		}
+		input[type="submit"]{
+				margin-bottom:0px;
+		}
+}
