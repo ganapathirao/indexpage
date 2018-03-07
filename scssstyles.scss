@@ -1,0 +1,90 @@
+body{
+	       font-family: Source Sans Pro Light;
+	}
+
+@mixin fonts($color,$font-size,$font-weight:bold){
+		  	  color: $color;
+	 	      font-size: $font-size;
+			  font-weight: $font-weight;
+}
+
+@mixin margins($padding,$margin-top,$margin-bottom){
+			  padding: $padding;
+			  margin-top:$margin-top;
+			  margin-bottom:$margin-bottom;
+}
+.firstbgimage{ 
+	          background-image: url("assets/bgimage.jpg");
+	          background-repeat:no-repeat;
+	          height: 610px;
+	          background-size: 100%;
+		}
+.firstbgimage p{
+		      @include fonts(white,40px,null);
+		      margin-top: 70px;
+}
+.secondbgimage {
+			  background-image: url("assets/bgimgforlg.jpg");
+			  background-repeat: no-repeat;			
+			  height:968px; 
+			  background-size: cover;
+		   }
+h1{
+       @include fonts(null,40px);
+}
+h2{
+ 	   @include fonts(red,26px);
+}
+h3{
+   	   @include fonts(white,34px);
+}
+h4{
+	   @include fonts(white,20px,null);
+	   line-height:0.6;	
+}
+h5{
+	   @include fonts(black,24px,null);
+}
+ .asidediv{
+		   margin-top:55px;
+  }
+.asidecontent{
+		   text-indent:30px;
+		   text-align:justify;
+		   font-size:20px;
+		   margin-top:10px;
+		   line-height:1.3;
+	 }
+
+input[type="search"]{
+		   @include fonts(black,18px);
+		   font-style:italic;
+		   @include margins(3px 90px 3px 5px,20px,null);
+}
+input[type="button"]{
+		   @include fonts(red,18px);
+		   @include margins(3px 100px 3px 5px,null,15px);
+		   background-color: white;
+		   border:2px solid red;
+}
+
+input[type="submit"]{
+		   	@include fonts(white,18px);
+		    @include margins(3px 90px 3px 5px,null,50px);
+		    background-color: #f81010;
+		  	border-color: #f81010;
+}
+.bgimgtext{
+			background-color: #000000;
+			opacity: 0.7;
+			margin-top:520px;
+  	 }
+.footer{
+			background-image: url("assets/footerimg2.jpg");		
+	}
+.footertext{
+		   @include fonts(white,18px,null);
+		   @include margins(null,60px,10px);
+}
+
+@import "media";
